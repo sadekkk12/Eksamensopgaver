@@ -12,9 +12,7 @@ import java.util.ArrayList;
    */
 
 public class Tekst {
-    private ArrayList<String>Tekstlinjer; // Her oprettes attributten tekstlinjer i form af en arrayliste der kan holde strenge
-    //Her defineres arraylisten,den bliver ikke deklareret eller initialiseret.Først skrives Arraylist efterfulgt af data type og navnet på arraylisten
-    // DEL OPGAVE 1 FULFØRT!
+    private ArrayList<String>Tekstlinjer; // Her oprettes/erklærer/declaration attributten tekstlinjer i form af en arrayliste der kan holde strenge
 
     private void tilføj(String tilføjelse){ // Her oprettes metoden tilføj som kan tilføje tekstlinjer.
         //Denne metode er void, fordi vi ikke returnere noget. Inden i parantesen har vi metodes argument tilføjelse, som er en string.

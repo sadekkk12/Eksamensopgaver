@@ -9,24 +9,24 @@ public class Film {
      og en anden konstruktør der kun modtager en filmtitel og selv sætter udgivelsåret til det aktuelle år
      3. tilføj en klasse Opgave2.Producer, og giv Opgave2.Film klassen mulighed for at "koble" en producter til en film.
      */
-    String filmtitel; // her oprettes attributterne filmtitel og udgivelsesår som skal bruges i konstruktøren.
-    int udgivelsesår;
+    String filmtitel; // her oprettes/erklæres/delcaration attributten filmtitel, der benyttes String fordi filmtitlen kommer i form af en streng tekst
+    int udgivelsesår; // her oprettes attributten udgivelsesår, der benytter int fordi år gives i hele år.
     Producer producer; //TODO hvad ville man kalde det her? /terminologi
 
-    public Film(String filmtitel, int udgivelsesår) {  // her oprettes den første konstruktør
+    public Film(String filmtitel, int udgivelsesår) {  // her oprettes den første konstruktør som modtager filmtitel og udgivelsesår
         this.filmtitel = filmtitel;  //TODO hvad kalder man det?? initialisere??
         this.udgivelsesår = udgivelsesår;
     }
 
-    public Film(String filmtitel) { // her oprettes den anden konstruktør som har kræver en manuael indtastning af filmtitel
-        // mens udgivelsesår automatisk er sat til det nuværende år
+    public Film(String filmtitel) { // her oprettes den anden konstruktør som kun modtager filmtitel
+        // mens udgivelsesår automatisk er sat til det aktuelle år
         this.filmtitel = filmtitel;
         this.udgivelsesår = Year.now().getValue();  // Her sættes udgivelsesår til det aktuelle år.
         // Year.now() altså det aktuelle år og så getValue(), hvor vi henter dens værdi.
     }
 
     public void setProducer(Producer producer) { // Her opretter vi setProducer metoden således at vi kan tilknytte en producer til filmene.
-        this.producer = producer; // her fortæller vi hvilken værdi produceren skal have/??instialisere??
+        this.producer = producer; // her fortæller vi hvilken værdi produceren skal have/??instialisere?? //TODO
         // som så er attributten vi har deklareret øverste, som er taget fra klassen Opgave2.Producer.
     }
 
