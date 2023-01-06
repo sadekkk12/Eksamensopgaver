@@ -11,6 +11,7 @@ public class Keyword {
      og en kort liste af disse keywords.
      */
     //TODO kigge på den her opgave og dens svar.. usikker
+    //TODO se kommentarer igennem
     String name; // erklærer name
     String description; //erklærer description
     ArrayList<String> seeAlso; // her erklæres arraylisten Also
