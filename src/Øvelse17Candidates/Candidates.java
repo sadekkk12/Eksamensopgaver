@@ -1,3 +1,5 @@
+package Øvelse17Candidates;
+
 public class Candidates {
     String name;
     String party;

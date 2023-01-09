@@ -1,3 +1,5 @@
+package Øvelse17Candidates;
+
 import java.util.ArrayList;
 
 public class Election {
