@@ -11,23 +11,28 @@ public class Image {
         this.width = width;
         this.height = height;
     }
-    public boolean isKnownFileType(){
-        if (this.filename.contains("gif")){
-            return true;
-        }else return false;
-    }
-    public boolean isPortrait(){
-        if(height > width) {
-            return true;
-
-        }else
-            return false;
-    }
-    public boolean isLandscape(){
-        if (width > height){
+    public boolean isKnownFileType() {
+        if (filename.contains("gif")){
             return true;
         } else
             return false;
+       /* boolean matches = false;
+        String[] Filetypes = {"gif", "jpeg", "jpg", "png", "webp", "bmp"};
+        for (String s : Filetypes) {
+            if (s.contains(this.filename)) {
+                matches = true;
+                break;
+            }
+        }
+        return matches;
+
+        */
+    }
+    public boolean isPortrait(){
+        return height > width;
+    }
+    public boolean isLandscape(){
+        return width > height;
     }
 
     public static void main(String[] args) {
