@@ -1,4 +1,4 @@
-package Øvelse17Candidates;
+package Opgave17Candidates;
 
 public class Candidate {
     private String name, party;
@@ -19,6 +19,6 @@ public class Candidate {
 
     @Override
     public String toString() {
-        return name + " " + party;
+        return "Name:" + " " + name + ", " + "party:" + " " + party;
     }
 }

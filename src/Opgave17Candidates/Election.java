@@ -1,4 +1,4 @@
-package Øvelse17Candidates;
+package Opgave17Candidates;
 
 import java.util.ArrayList;
 
@@ -37,5 +37,6 @@ public class Election {
         Election election = new Election();
         System.out.println(election.getTotalVotes());
         System.out.println(election.getCandidatesFromParty("Party1"));
+        System.out.println(election.getCandidatesFromParty("Party2"));
     }
 }

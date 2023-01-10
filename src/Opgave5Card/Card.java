@@ -85,8 +85,8 @@ public class Card {
 
 
 
-   int value;
-    Suit suit;
+   private int value;
+    private Suit suit;
 
     public Card(Suit suit, int value) {
         this.suit = suit;
@@ -94,10 +94,10 @@ public class Card {
 
     }
 
-    public boolean beats(Card card) {
+    private boolean beats(Card card) {
         if (this.suit.number > card.suit.number) {
             return true;
-        } else if ( card.suit.number > this.suit.number  ) {
+        } else if (card.suit.number > this.suit.number) {
             return false;
             } else
                 if (this.value > card.value) {
@@ -107,20 +107,24 @@ public class Card {
                     return false;
                 }
                 else
-                    return false;
+                return false;
 
         }
 
 
 
+
+
     public static void main(String[] args) {
         Card card1 = new Card(Suit.Spades,10);
-        Card card2 = new Card(Suit.Spades,11);
+        Card card2 = new Card(Suit.Spades,10);
         Card card3 = new Card(Suit.Clubs, 13);
+        Card card4 = new Card(Suit.Diamonds, 1);
 
 
         System.out.println(card1.beats(card2));
         System.out.println(card1.beats(card3));
+        System.out.println(card3.beats(card4));
 
     }
 }
