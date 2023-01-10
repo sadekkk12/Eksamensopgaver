@@ -77,3 +77,36 @@ public class Card {
         } else {
 
  */
+
+
+ /*   int value;
+    Suit suit;
+
+    public Card(Suit suit, int value) {
+        this.suit = suit;
+        this.value = value;
+
+    }
+
+    public boolean beats(Card card) {
+        if (this.value > card.value) {
+            return true;
+        } else if (this.value == card.value) {
+            return this.suit.number > card.suit.number;
+
+        }
+        return false;
+    }
+
+
+
+    public static void main(String[] args) {
+        Card card1 = new Card(Suit.Spades,10);
+        Card card2 = new Card(Suit.Spades,8);
+        System.out.println(card1.beats(card2));
+
+    }
+}
+
+
+  */

@@ -9,23 +9,33 @@ public class JuleGave {
     boolean isRectangular;
     boolean doesRattle;
 
-    public JuleGave(boolean isSoft, boolean isRectangular, boolean doesRattle){
+
+    public JuleGave(){
         Random rng = new Random();
         this.isSoft = rng.nextBoolean();
         this.isRectangular = rng.nextBoolean();
         this.doesRattle = rng.nextBoolean();
 
-
+    }
+    public JuleGave(boolean isSoft, boolean isRectangular, boolean doesRattle){
+        this.isSoft = isSoft;
+        this.isRectangular = isRectangular;
+        this.doesRattle = doesRattle;
     }
     public Boolean couldBeLego(){
-        if (isSoft == false && isRectangular == true && doesRattle == true){
+        return !isSoft && isRectangular && doesRattle;
+    }
+        /*if (isSoft == false && isRectangular == true && doesRattle == true){
             return true;
         } else
             return false;
     }
 
+         */
+
     public static void main(String[] args) {
         JuleGave gave1 = new JuleGave(false, true, false);
+        JuleGave tilfældigGave = new JuleGave();
         System.out.println(gave1);
 
 
