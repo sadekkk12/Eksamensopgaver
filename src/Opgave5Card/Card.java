@@ -6,8 +6,9 @@ public class Card {
      - suit kan være "hearts", "diamonds", "clubs" eller "spades" - value kan være 1-13
      2. tilføj en metode "beats" der modtager et andet card og fortæller om dette korts værdi slår det andets værdi (ignorer suit)
      3. ret metoden så den også tager højde for suit - spades slår hearts, som slår diamond som slår clubs.
-     */
     // TODO LAVE KOMMENTAR
+     */
+    /*
     Suit suit;
     int value;
 
@@ -17,7 +18,7 @@ public class Card {
 
     }
 
-    /*public int getSuitRanking(Suit suit) {
+    public int getSuitRanking(Suit suit) {
         int suitrank = 0;
         switch (suit) {
             case Spades -> suitrank = 4;
@@ -27,7 +28,7 @@ public class Card {
         }
         return suitrank;
     }
-     */
+
 
     private void beats(Card card) {
         if (this.suit.number > card.suit.number) {
@@ -66,10 +67,14 @@ public class Card {
         //  card5.beats(card4);
     }
 
+
+
     public String toString() {
         return Suit.values().toString() + value;
     }
 }
+
+     */
 /*if (getSuitRanking(this.suit) > getSuitRanking(card.suit)) {
         System.out.println("this card " + this.value + " " + this.suit + " beats " + card.value + " " + card.suit);
         } else if (getSuitRanking(card.suit) > getSuitRanking(this.suit)) {
@@ -79,7 +84,8 @@ public class Card {
  */
 
 
- /*   int value;
+
+   int value;
     Suit suit;
 
     public Card(Suit suit, int value) {
@@ -89,24 +95,35 @@ public class Card {
     }
 
     public boolean beats(Card card) {
-        if (this.value > card.value) {
+        if (this.suit.number > card.suit.number) {
             return true;
-        } else if (this.value == card.value) {
-            return this.suit.number > card.suit.number;
+        } else if ( card.suit.number > this.suit.number  ) {
+            return false;
+            } else
+                if (this.value > card.value) {
+                    return true;
+                }
+                else if (card.value > this.value) {
+                    return false;
+                }
+                else
+                    return false;
 
         }
-        return false;
-    }
 
 
 
     public static void main(String[] args) {
         Card card1 = new Card(Suit.Spades,10);
-        Card card2 = new Card(Suit.Spades,8);
+        Card card2 = new Card(Suit.Spades,11);
+        Card card3 = new Card(Suit.Clubs, 13);
+
+
         System.out.println(card1.beats(card2));
+        System.out.println(card1.beats(card3));
 
     }
 }
 
 
-  */
+
