@@ -4,14 +4,16 @@ import java.util.Random;
 
 public class ExamQuestions {
     private int number;
-    private String grade;
+    private char grade;
     public ExamQuestions(int number){
         this.number = number;
     }
     public void setGrade(){
-        String [] grades = {"A","B","C","D","E","F"};
+       // String [] grades = {"A","B","C","D","E","F"};
+        //TODO ARRAY med CHAR
+        char[] gradesWithChar =  {'A', 'B','C','D','E','F'};
         Random random = new Random();
-        grade = grades[random.nextInt(0,6)];
+        grade = gradesWithChar[random.nextInt(0,6)];
 
     }
    // public String getGrade(){
@@ -33,6 +35,7 @@ public class ExamQuestions {
 
         }
     }
+    // TODO string.charat til NAMEID
 
 
 

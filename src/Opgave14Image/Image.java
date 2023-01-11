@@ -12,10 +12,12 @@ public class Image {
         this.height = height;
     }
     public boolean isKnownFileType() {
-        if (filename.contains("gif")){
+        boolean fileFormat = false;
+        String[] fileNameSplit = filename.split("\\.");
+        /*if (filename.equals(".gif")){
             return true;
         } else
-            return false;
+            return false;*/
        /* boolean matches = false;
         String[] Filetypes = {"gif", "jpeg", "jpg", "png", "webp", "bmp"};
         for (String s : Filetypes) {
@@ -27,6 +29,18 @@ public class Image {
         return matches;
 
         */
+        //TODO try catch eksempel
+        try {
+            switch (fileNameSplit[1]) {
+                case "gif", "jpeg", "png" -> fileFormat = true;
+                default -> fileFormat = false;
+            }
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Mangler filtype");
+            return false;
+        }
+
+return fileFormat;
     }
     public boolean isPortrait(){
         return height > width;
@@ -41,9 +55,11 @@ public class Image {
 
         System.out.println(image1);
         System.out.println(image2);
+        //TODO printf eksempel
+        System.out.printf("Dette er billede 1 %s og dett er billedets bredde %d", image1.filename, image1.width); // printf
     }
     public String toString(){
-        return "Filename: " + filename + " " + " Width: " + width + " " + "Height " + height + "\n"
+        return "Filename: " + filename + "," + " Width: " + width + ", Height " + height + "\n"
                 + "This file is a known type: " + isKnownFileType() + "\n" +
                 "isPortrait: " + isPortrait() + "\n" +
                 "isLandscape: " + isLandscape() + "\n";

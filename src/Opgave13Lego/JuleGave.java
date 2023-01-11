@@ -32,7 +32,7 @@ public class JuleGave {
     }
 
          */
-
+//TODO look up ternary operator return 10+10 ? true:false
     public static void main(String[] args) {
         JuleGave gave1 = new JuleGave(false, true, false);
         JuleGave tilfældigGave = new JuleGave();
