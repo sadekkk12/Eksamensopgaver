@@ -9,36 +9,34 @@ public class Film {
      og en anden konstruktør der kun modtager en filmtitel og selv sætter udgivelsåret til det aktuelle år
      3. tilføj en klasse Opgave2.Producer, og giv Opgave2.Film klassen mulighed for at "koble" en producter til en film.
      */
-    String filmtitel; // her oprettes/erklæres/delcaration attributten filmtitel, der benyttes String fordi filmtitlen kommer i form af en streng tekst
-    int udgivelsesår; // her oprettes attributten udgivelsesår, der benytter int fordi år gives i hele år.
-    Producer producer; //TODO hvad ville man kalde det her? /terminologi
+    String filmtitel;
+    int udgivelsesår;
+    Producer producer;
 
-    public Film(String filmtitel, int udgivelsesår) {  // her oprettes den første konstruktør som modtager filmtitel og udgivelsesår
-        this.filmtitel = filmtitel;  //TODO hvad kalder man det?? initialisere??
+    public Film(String filmtitel, int udgivelsesår) {
+        this.filmtitel = filmtitel;
         this.udgivelsesår = udgivelsesår;
     }
 
-    public Film(String filmtitel) { // her oprettes den anden konstruktør som kun modtager filmtitel
-        // mens udgivelsesår automatisk er sat til det aktuelle år
+    public Film(String filmtitel) {
+
         this.filmtitel = filmtitel;
-        this.udgivelsesår = Year.now().getValue();  // Her sættes udgivelsesår til det aktuelle år.
-        // Year.now() altså det aktuelle år og så getValue(), hvor vi henter dens værdi.
-    }
+        this.udgivelsesår = Year.now().getValue();
 
-    public void setProducer(Producer producer) { // Her opretter vi setProducer metoden således at vi kan tilknytte en producer til filmene.
-        this.producer = producer; // her fortæller vi hvilken værdi produceren skal have/??instialisere?? //TODO
-        // som så er attributten vi har deklareret øverste, som er taget fra klassen Opgave2.Producer.
     }
+    public void setProducer(Producer producer) {
+        this.producer = producer;
 
+    }
     public static void main(String[] args) {
-        Film SadeksFilm = new Film("Sadekfilm", 2022); //oprettelsen af film med to parametre
-        SadeksFilm.setProducer(new Producer("Jimmy")); // tilknytning af producer
-        Film ToresFilm = new Film("Torefilm", 2023); //oprettelsen af film med to parametre
-        ToresFilm.setProducer(new Producer("Sadek")); // tilknytning af producer
-        Film SadekThisyearfilm = new Film("Sadekthisyear"); //opretetlsen af film med ET parameter og det aktuelle år
-        SadekThisyearfilm.setProducer(new Producer("Tore")); // tilknytning af producer
-        Film ToreThisyearfilm = new Film("Torethisyear"); //opretetlsen af film med ET parameter og det aktuelle år
-        ToreThisyearfilm.setProducer(new Producer("Sadek")); // tilknytning af producer
+        Film SadeksFilm = new Film("Sadekfilm", 2022);
+        SadeksFilm.setProducer(new Producer("Jimmy"));
+        Film ToresFilm = new Film("Torefilm", 2023);
+        ToresFilm.setProducer(new Producer("Sadek"));
+        Film SadekThisyearfilm = new Film("Sadekthisyear");
+        SadekThisyearfilm.setProducer(new Producer("Tore"));
+        Film ToreThisyearfilm = new Film("Torethisyear");
+        ToreThisyearfilm.setProducer(new Producer("Sadek"));
 
         System.out.println(SadeksFilm);
         System.out.println(ToresFilm);
@@ -47,8 +45,7 @@ public class Film {
 
     }
 
-    public String toString() { //her laves en toString metode, som viser hvordan de forskellige informationer skal præsenteres på skærmen.
-        //man kunne PRINTF istedet //TODO kig ind til det.
+    public String toString() {
         return "Titel: " + filmtitel + ", Opgave2.Producer: " + producer + ", Udgivelsesår: " + udgivelsesår;
     }
 }

@@ -74,16 +74,16 @@ public class Card {
     }
 }
 
-     */
-/*if (getSuitRanking(this.suit) > getSuitRanking(card.suit)) {
+
+if (getSuitRanking(this.suit) > getSuitRanking(card.suit)) {
         System.out.println("this card " + this.value + " " + this.suit + " beats " + card.value + " " + card.suit);
         } else if (getSuitRanking(card.suit) > getSuitRanking(this.suit)) {
         System.out.println("other card " + card.value + " " + card.suit + " beats " + this.value + " " + this.suit);
         } else {
 
- */
 
 
+     */
 
    private int value;
     private Suit suit;
@@ -93,7 +93,6 @@ public class Card {
         this.value = value;
 
     }
-
     private boolean beats(Card card) {
         if (this.suit.number > card.suit.number) {
             return true;
@@ -110,10 +109,6 @@ public class Card {
                 return false;
 
         }
-
-
-
-
 
     public static void main(String[] args) {
         Card card1 = new Card(Suit.Spades,10);

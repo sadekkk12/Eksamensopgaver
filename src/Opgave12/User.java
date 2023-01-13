@@ -36,6 +36,18 @@ public class User {
             sb.append(random.nextInt(0,9));
             sb.append(random.nextInt(0,9));
             return String.valueOf(sb);
+
+            /*
+            String sb = String.valueOf(splitName[0].charAt(0)) +
+                    splitName[0].charAt(1) +
+                    splitName[1].charAt(0) +
+                    splitName[1].charAt(1) +
+                    random.nextInt(0, 9) +
+                    random.nextInt(0, 9) +
+                    random.nextInt(0, 9) +
+                    random.nextInt(0, 9);
+            return String.valueOf(sb);
+             */
         }
     public static void main(String[] args) {
 

@@ -32,6 +32,7 @@ public class Bil {
     }
     public int Totalvægt(){
        return this.trailer !=null ? trailer.getVægt() + vægt : vægt;
+       // TODO kigger på ternary
     }
 
     public static void main(String[] args) {

@@ -40,7 +40,6 @@ return fileFormat;
 
         System.out.println(image1);
         System.out.println(image2);
-        //TODO printf eksempel
         System.out.printf("Dette er billede 1 %s og dett er billedets bredde %d", image1.filename, image1.width); // printf
     }
     public String toString(){

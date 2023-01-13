@@ -1,5 +1,11 @@
 package Opgave9Motherboard;
 
 public class SataDrive {
-    // TODO how to
+    private String name;
+    public SataDrive(String name){
+        this.name = name;
+    }
+    public String toString(){
+        return name;
+    }
 }
