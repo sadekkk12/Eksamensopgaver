@@ -22,24 +22,15 @@ public class BMI {
     }
 
     public boolean isUnderWeight() {
-        if (BMIberegner() < 18.5) {
-            return true;
-        } else
-            return false;
+        return BMIberegner() < 18.5;
     }
 
     public boolean isNormalWeight() {
-        if (BMIberegner() > 18.5 && BMIberegner() <= 25) {
-            return true;
-        } else
-            return false;
+        return BMIberegner() > 18.5 && BMIberegner() <= 25;
     }
 
     public boolean isOverWeight() {
-        if (BMIberegner() > 25) {
-            return true;
-        } else
-            return false;
+        return BMIberegner() > 25;
     }
 
 
@@ -50,7 +41,7 @@ public class BMI {
         System.out.println("this person is underweight: " + person1.isUnderWeight());
         System.out.println("this person is normalweight: " + person1.isNormalWeight());
         System.out.println("this person is overweight: " + person1.isOverWeight());
-        System.out.printf("-----");
+        System.out.println("-----");
         System.out.printf("\nthis person is:\n" +
                 "   is underweight: %s\n" +
                 "   is normalweight: %s\n" +

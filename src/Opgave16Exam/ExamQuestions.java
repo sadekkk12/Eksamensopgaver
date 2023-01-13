@@ -16,9 +16,6 @@ public class ExamQuestions {
         grade = gradesWithChar[random.nextInt(0,6)];
 
     }
-   // public String getGrade(){
-     //   return grade;
-    // }
 
     public String toString(){
         return "Question number " + number + " grade: " + grade;
@@ -35,7 +32,6 @@ public class ExamQuestions {
 
         }
     }
-    // TODO string.charat til NAMEID
 
 
 

@@ -12,17 +12,17 @@ public class Keyword {
      */
     //TODO kigge på den her opgave og dens svar.. usikker
     //TODO se kommentarer igennem
-    String name; // erklærer name
-    String description; //erklærer description
-    ArrayList<String> seeAlso; // her erklæres arraylisten Also
-public Keyword(String name, String description){ // her oprettes konstruktøren Keyword med parameterne name og description.
+    String name;
+    String description;
+    ArrayList<String> seeAlso;
+public Keyword(String name, String description){
     this.name = name;
     this. description = description;
 }
-public Keyword(String name){ // her oprettes konstruktøren med et parameter.
+public Keyword(String name){
     this.name = name;
 }
-public void addSeeAlso(String seeAlso){ // denne metoder tilføjer
+public void addSeeAlso(String seeAlso){
 this.seeAlso.add(seeAlso);
 }
 

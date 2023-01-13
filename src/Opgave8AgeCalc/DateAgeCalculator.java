@@ -34,13 +34,6 @@ public class DateAgeCalculator {
 
 
         public static void main (String[]args){
-          // Scanner scanner = new Scanner(System.in);
-            //System.out.println("Dette er en date age calculator!");
-            //System.out.println("indtast din alder!");
-            //int yourAge = scanner.nextInt();
-            //System.out.println("indtast din dates alder!");
-            //int dateAge = scanner.nextInt();
-
             DateAgeCalculator potentialDate1 = new DateAgeCalculator(26, 24);
             DateAgeCalculator potentialDate2 = new DateAgeCalculator(24, 18);
             System.out.println(potentialDate1.acceptableDateAge());

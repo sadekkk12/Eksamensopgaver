@@ -1,12 +1,12 @@
 package Opgave6Bil;
 
-public class Trailer extends Bil {
-    int vægt;
+public class Trailer {
+     private int vægt;
    public Trailer(int vægt) {
-       super(vægt);
+       this.vægt = vægt;
    }
    public int getVægt(){
-       return this.vægt;
+       return vægt;
     }
 
     }

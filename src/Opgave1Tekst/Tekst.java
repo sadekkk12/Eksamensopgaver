@@ -12,36 +12,35 @@ import java.util.ArrayList;
    */
 
 public class Tekst {
-    private ArrayList<String>Tekstlinjer; // Her oprettes/erklærer/declaration attributten tekstlinjer i form af en arrayliste der kan holde strenge
+    private ArrayList<String>Tekstlinjer;
 
-    private void tilføj(String tilføjelse){ // Her oprettes metoden tilføj som kan tilføje tekstlinjer.
-        //Denne metode er void, fordi vi ikke returnere noget. Inden i parantesen har vi metodes argument tilføjelse, som er en string.
-        Tekstlinjer.add(tilføjelse); //Her tilføjer vi strengen (tilføjelse) i arraylisten tekstLinjer
+    private void tilføj(String tilføjelse){
+
+        Tekstlinjer.add(tilføjelse);
 
     }
-    private int findAntalUnikke(){ // her tilføjes metoden der finder antal unikke tekstlinjer, i metoden benyttes int, fordi vi vil have antal returneret.
-        ArrayList<String>unikke = new ArrayList<>(); // oprettes arraylisten unikke, som indeholder alle de unikke tekstlinjer
-        for (String s: Tekstlinjer){  // her kører et for loop.Hver String tekstlinje ''s'' i arraylisten tekstlinjer, skal køres igennem dette loop.
-            if (!unikke.contains(s)) // hvert element i Tekstlinjer bliver kørt igennem loopet.
-                // Hvis arraylisten unikke ikke inderholder elementet ''s'' fra arraylisten tekstlinjer, så tilføjes elementet til arraylisten unikke.
+    private int findAntalUnikke(){
+        ArrayList<String>unikke = new ArrayList<>();
+        for (String s: Tekstlinjer){
+            if (!unikke.contains(s))
                 unikke.add(s);
         }
-        return unikke.size(); // her returneres størrelsen på arraylisten unikkes størrelse.
+        return unikke.size();
 
     }
     private int findAntalEnkeltstående() {
         ArrayList<String> unikke = new ArrayList<>();
         ArrayList<String> removedFromUnikke = new ArrayList<>();
         for (String s : Tekstlinjer) {
-            if (!unikke.contains(s) && !removedFromUnikke.contains(s)) // hvis elementet i arraylisten tekstlinjer ikke er i unikke eller removedfrom unikke.
-                // bliver den tilføjet i unikke
+            if (!unikke.contains(s) && !removedFromUnikke.contains(s))
+
                 unikke.add(s);
-            else { // hvis unikke eller removedfromunikke indeholder elementet. Så bliver det removed fra unikke og tilføjet removed from unikke.
+            else {
                 unikke.remove(s);
                 removedFromUnikke.add(s);
             }
         }
-        return unikke.size(); // her returnes størrelsen på antal enkeltståendeunikke.
+        return unikke.size();
     }
     public static void main(String[] args) {
         Tekst program = new Tekst(); //TODO hvad kalder man det her?

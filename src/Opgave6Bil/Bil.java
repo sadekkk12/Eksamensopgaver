@@ -11,25 +11,44 @@ package Opgave6Bil;
 //TODO lave færdig
 // kommentarer
 public class Bil {
-    Trailer trailer;
-    int vægt;
+    private Trailer trailer;
+   private  int vægt;
 
     public Bil(int vægt){
         this.vægt = vægt;
 
     }
+    public boolean connectTrailer(Trailer trailer){
+        this.trailer = trailer;
+        if (Totalvægt() > 3500){
+            this.trailer = null;
+            return false;
+        }
+        return true;
+    }
     public int getBilVægt(){
         return vægt;
 
     }
-    //public int Totalvægt(){
-      //  return this.vægt +this.trailer.getVægt();
-   // }
+    public int Totalvægt(){
+       return this.trailer !=null ? trailer.getVægt() + vægt : vægt;
+    }
 
     public static void main(String[] args) {
-        Trailer trailer = new Trailer(3232);
-        Bil bil = new Bil(1000);
-        System.out.println(bil.getBilVægt());
-        System.out.println(trailer.getVægt());
+        Trailer trailer = new Trailer(500);
+        Bil bil = new Bil(3000);
+        System.out.println(bil);
+        if (!bil.connectTrailer(trailer)) {
+            System.out.println("trailer ikke tilkoblet");
+        }
+        else if (bil.connectTrailer(trailer)){
+            System.out.println("trailer er tilkoblet");
+        }
+        System.out.println(bil.connectTrailer(trailer));
+
     }
-}
+    public String toString(){
+        return "Bilen vejer:" + getBilVægt() + " og total vægten er:" + Totalvægt();
+    }
+    }
+

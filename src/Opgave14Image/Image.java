@@ -14,21 +14,6 @@ public class Image {
     public boolean isKnownFileType() {
         boolean fileFormat = false;
         String[] fileNameSplit = filename.split("\\.");
-        /*if (filename.equals(".gif")){
-            return true;
-        } else
-            return false;*/
-       /* boolean matches = false;
-        String[] Filetypes = {"gif", "jpeg", "jpg", "png", "webp", "bmp"};
-        for (String s : Filetypes) {
-            if (s.contains(this.filename)) {
-                matches = true;
-                break;
-            }
-        }
-        return matches;
-
-        */
         //TODO try catch eksempel
         try {
             switch (fileNameSplit[1]) {
