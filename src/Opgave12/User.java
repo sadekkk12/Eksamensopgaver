@@ -44,7 +44,7 @@ public class User {
 
         System.out.println(user.validUserID());
         System.out.println(user2.validUserID());
-        User user3 = new User("RAsmus rasumssen");
+        User user3 = new User("rasmus rasumssen");
         System.out.println(user3.getUserID());
         System.out.println(user3.validUserID());
         }
