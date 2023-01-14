@@ -1,0 +1,108 @@
+name:audio1
+duration: 12
+loudness:-10.4
+name:audio2
+duration: 5
+loudness:-4.0
+name:audio3
+duration: 10
+loudness:-12.4
+name:video1
+duration: 25
+aspectratio:16:9
+name:video2
+duration: 20
+aspectratio:6:9
+name:video3
+duration: 15
+aspectratio:16:9
+name:audio1
+duration: 12
+loudness:-10.4
+name:audio2
+duration: 5
+loudness:-4.0
+name:audio3
+duration: 10
+loudness:-12.4
+name:video1
+duration: 25
+aspectratio:16:9
+name:video2
+duration: 20
+aspectratio:6:9
+name:video3
+duration: 15
+aspectratio:16:9
+name:audio1
+duration: 12
+loudness:-10.4
+name:audio2
+duration: 5
+loudness:-4.0
+name:audio3
+duration: 10
+loudness:-12.4
+name:video1
+duration: 25
+aspectratio:16:9
+name:video2
+duration: 20
+aspectratio:6:9
+name:video3
+duration: 15
+aspectratio:16:9
+name:audio1
+duration: 12
+loudness:-10.4
+name:audio2
+duration: 5
+loudness:-4.0
+name:audio3
+duration: 10
+loudness:-12.4
+name:video1
+duration: 25
+aspectratio:16:9
+name:video2
+duration: 20
+aspectratio:6:9
+name:video3
+duration: 15
+aspectratio:16:9
+name:audio1
+duration: 12
+loudness:-10.4
+name:audio2
+duration: 5
+loudness:-4.0
+name:audio3
+duration: 10
+loudness:-12.4
+name:video1
+duration: 25
+aspectratio:16:9
+name:video2
+duration: 20
+aspectratio:6:9
+name:video3
+duration: 15
+aspectratio:16:9
+name:audio1
+duration: 12
+loudness:-10.4
+name:audio2
+duration: 5
+loudness:-4.0
+name:audio3
+duration: 10
+loudness:-12.4
+name:video1
+duration: 25
+aspectratio:16:9
+name:video2
+duration: 20
+aspectratio:6:9
+name:video3
+duration: 15
+aspectratio:16:9
