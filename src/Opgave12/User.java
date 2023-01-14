@@ -3,39 +3,40 @@ package Opgave12;
 import java.util.Random;
 
 public class User {
-        private String fullName;
-        private String userID;
+    private String fullName;
+    private String userID;
 
-        public User (String fullName, String userID){
-            this.fullName = fullName;
-            this.userID = userID;
-        }
-        public User(String fullName){
-            this.fullName = fullName;
-            this.userID = createUserID();
-        }
+    public User(String fullName, String userID) {
+        this.fullName = fullName;
+        this.userID = userID;
+    }
 
-        public String getUserID() {
-            return userID;
-        }
+    public User(String fullName) {
+        this.fullName = fullName;
+        this.userID = createUserID();
+    }
 
-        public boolean validUserID(){
-            return userID.matches("[a-å]{4}[0-9]{4}");
-        }
+    public String getUserID() {
+        return userID;
+    }
 
-        public String createUserID(){
-            String[] splitName = fullName.split(" ");
-            Random random = new Random();
-            StringBuilder sb = new StringBuilder();
-            sb.append(splitName[0].charAt(0));
-            sb.append(splitName[0].charAt(1));
-            sb.append(splitName[1].charAt(0));
-            sb.append(splitName[1].charAt(1));
-            sb.append(random.nextInt(0,9));
-            sb.append(random.nextInt(0,9));
-            sb.append(random.nextInt(0,9));
-            sb.append(random.nextInt(0,9));
-            return String.valueOf(sb);
+    public boolean validUserID() {
+        return userID.matches("[a-å]{4}[0-9]{4}");
+    }
+
+    public String createUserID() {
+        String[] splitName = fullName.split(" ");
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+        sb.append(splitName[0].charAt(0));
+        sb.append(splitName[0].charAt(1));
+        sb.append(splitName[1].charAt(0));
+        sb.append(splitName[1].charAt(1));
+        sb.append(random.nextInt(0, 9));
+        sb.append(random.nextInt(0, 9));
+        sb.append(random.nextInt(0, 9));
+        sb.append(random.nextInt(0, 9));
+        return String.valueOf(sb);
 
             /*
             String sb = String.valueOf(splitName[0].charAt(0)) +
@@ -48,7 +49,8 @@ public class User {
                     random.nextInt(0, 9);
             return String.valueOf(sb);
              */
-        }
+    }
+
     public static void main(String[] args) {
 
         User user = new User("Mogens Mogensen", "abcd1234");
@@ -59,9 +61,9 @@ public class User {
         User user3 = new User("rasmus rasumssen");
         System.out.println(user3.getUserID());
         System.out.println(user3.validUserID());
-        }
+    }
 
 
-        //TODO look up ternary operator return 10+10 ? true:false
+    //TODO look up ternary operator return 10+10 ? true:false
 }
 // TODO string.charat til NAMEID

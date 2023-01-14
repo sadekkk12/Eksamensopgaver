@@ -12,22 +12,24 @@ import java.util.ArrayList;
    */
 
 public class Tekst {
-    private ArrayList<String>Tekstlinjer;
+    private ArrayList<String> Tekstlinjer;
 
-    private void tilføj(String tilføjelse){
+    private void tilføj(String tilføjelse) {
 
         Tekstlinjer.add(tilføjelse);
 
     }
-    private int findAntalUnikke(){
-        ArrayList<String>unikke = new ArrayList<>();
-        for (String s: Tekstlinjer){
+
+    private int findAntalUnikke() {
+        ArrayList<String> unikke = new ArrayList<>();
+        for (String s : Tekstlinjer) {
             if (!unikke.contains(s))
                 unikke.add(s);
         }
         return unikke.size();
 
     }
+
     private int findAntalEnkeltstående() {
         ArrayList<String> unikke = new ArrayList<>();
         ArrayList<String> removedFromUnikke = new ArrayList<>();
@@ -42,6 +44,7 @@ public class Tekst {
         }
         return unikke.size();
     }
+
     public static void main(String[] args) {
         Tekst program = new Tekst(); //TODO hvad kalder man det her?
         program.Tekstlinjer = new ArrayList<>();  //TODO hvorfor skal man gøre det her for at få adgang?
@@ -57,4 +60,4 @@ public class Tekst {
     }
 
 
-    }
+}

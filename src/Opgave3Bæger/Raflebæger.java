@@ -29,16 +29,17 @@ public class Raflebæger {
         return antaløjne;
 
     }
-    public int[] se(){
+
+    public int[] se() {
         return terninger;
     }
 
     public static void main(String[] args) {
         Raflebæger bæger = new Raflebæger(4);
         System.out.println("Antal terninger: " + bæger.antalTerninger);
-        for (int i = 1; i < 11; i++){
+        for (int i = 1; i < 11; i++) {
             bæger.ryst();
-            System.out.println("Kast " + i + ": "+ Arrays.toString(bæger.se()) );
+            System.out.println("Kast " + i + ": " + Arrays.toString(bæger.se()));
         }
     }
 }

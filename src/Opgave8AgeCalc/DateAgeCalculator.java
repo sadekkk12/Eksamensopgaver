@@ -25,24 +25,24 @@ public class DateAgeCalculator {
 
     public void forUngEllerEj() {
 
-            if (dateAge >= acceptableDateAge()) {
-                System.out.println("Hvis du er " + yourAge + " og din date er " + dateAge + " så er hun gammel nok, hurray");
-            } else {
-                System.out.println("Hvis du er " + yourAge + " og din date er " + dateAge + " så er hun for ung! prøv igen!");
-            }
-    }
-
-
-        public static void main (String[]args){
-            DateAgeCalculator potentialDate1 = new DateAgeCalculator(26, 24);
-            DateAgeCalculator potentialDate2 = new DateAgeCalculator(24, 18);
-            System.out.println(potentialDate1.acceptableDateAge());
-            System.out.println(potentialDate2.acceptableDateAge());
-            potentialDate2.forUngEllerEj();
-            potentialDate1.forUngEllerEj();
-
-
+        if (dateAge >= acceptableDateAge()) {
+            System.out.println("Hvis du er " + yourAge + " og din date er " + dateAge + " så er hun gammel nok, hurray");
+        } else {
+            System.out.println("Hvis du er " + yourAge + " og din date er " + dateAge + " så er hun for ung! prøv igen!");
         }
     }
+
+
+    public static void main(String[] args) {
+        DateAgeCalculator potentialDate1 = new DateAgeCalculator(26, 24);
+        DateAgeCalculator potentialDate2 = new DateAgeCalculator(24, 18);
+        System.out.println(potentialDate1.acceptableDateAge());
+        System.out.println(potentialDate2.acceptableDateAge());
+        potentialDate2.forUngEllerEj();
+        potentialDate1.forUngEllerEj();
+
+
+    }
+}
 
 

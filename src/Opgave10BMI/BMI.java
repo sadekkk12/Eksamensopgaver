@@ -1,4 +1,5 @@
 package Opgave10BMI;
+
 /*
 1. lav en klasse BMI der har to attributer: height and weight
 2. lav en metode calculate, der berenger BMI ud fra de to værdier BMI = vægt/ height*height

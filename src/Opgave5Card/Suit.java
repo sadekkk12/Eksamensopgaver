@@ -7,7 +7,8 @@ public enum Suit {
     Clubs(1);
 
     int number;
-    Suit(int number){
+
+    Suit(int number) {
         this.number = number;
     }
-    }
+}

@@ -43,8 +43,8 @@ public class Dream {
         ArrayList<Dream> dreams = new ArrayList<>();
         dreams.addAll(List.of(dream1, dream2, dream3, dream4, dream5, dream6));
         for (int i = 0; i < dreams.size(); i++) {
-            System.out.printf("Drøm nummer #%d, er en %s drøm og varer i %d minutter. Drømmen var pleasant: %s", i+1, dreams.get(i).type,
-                    dreams.get(i).duration, dreams.get(i).isPleasant() + "\n");
+            System.out.printf("Drøm nummer #%d, er en %s drøm og varer i %d minutter. Drømmen var pleasant: %s", i + 1,
+                    dreams.get(i).type, dreams.get(i).duration, dreams.get(i).isPleasant() + "\n");
         }
         //TODO har brug for hjælp til den sidste
 

@@ -24,10 +24,12 @@ public class Film {
         this.udgivelsesår = Year.now().getValue();
 
     }
+
     public void setProducer(Producer producer) {
         this.producer = producer;
 
     }
+
     public static void main(String[] args) {
         Film SadeksFilm = new Film("Sadekfilm", 2022);
         SadeksFilm.setProducer(new Producer("Jimmy"));

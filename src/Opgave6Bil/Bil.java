@@ -12,27 +12,30 @@ package Opgave6Bil;
 // kommentarer
 public class Bil {
     private Trailer trailer;
-   private  int vægt;
+    private int vægt;
 
-    public Bil(int vægt){
+    public Bil(int vægt) {
         this.vægt = vægt;
 
     }
-    public boolean connectTrailer(Trailer trailer){
+
+    public boolean connectTrailer(Trailer trailer) {
         this.trailer = trailer;
-        if (Totalvægt() > 3500){
+        if (Totalvægt() > 3500) {
             this.trailer = null;
             return false;
         }
         return true;
     }
-    public int getBilVægt(){
+
+    public int getBilVægt() {
         return vægt;
 
     }
-    public int Totalvægt(){
-       return this.trailer !=null ? trailer.getVægt() + vægt : vægt;
-       // TODO kigger på ternary
+
+    public int Totalvægt() {
+        return this.trailer != null ? trailer.getVægt() + vægt : vægt;
+        // TODO kigger på ternary
     }
 
     public static void main(String[] args) {
@@ -41,15 +44,15 @@ public class Bil {
         System.out.println(bil);
         if (!bil.connectTrailer(trailer)) {
             System.out.println("trailer ikke tilkoblet");
-        }
-        else if (bil.connectTrailer(trailer)){
+        } else if (bil.connectTrailer(trailer)) {
             System.out.println("trailer er tilkoblet");
         }
         System.out.println(bil.connectTrailer(trailer));
 
     }
-    public String toString(){
+
+    public String toString() {
         return "Bilen vejer:" + getBilVægt() + " og total vægten er:" + Totalvægt();
     }
-    }
+}
 

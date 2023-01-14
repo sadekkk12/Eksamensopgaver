@@ -14,8 +14,8 @@ public class Motherboard {
     }
 
     public boolean addDrive(SataDrive drive) {
-        for (int i = 0; i < sataDrives.length; i++){
-            if (sataDrives[i] == null){
+        for (int i = 0; i < sataDrives.length; i++) {
+            if (sataDrives[i] == null) {
                 sataDrives[i] = drive;
                 return true;
             }
@@ -42,11 +42,11 @@ public class Motherboard {
         drives.add(drive5);
 
         System.out.println(drives);
-        for (SataDrive drive: drives){
-            if (motherboard.addDrive(drive)){
+        for (SataDrive drive : drives) {
+            if (motherboard.addDrive(drive)) {
                 System.out.println("this drive:" + drive + " is now added");
 
-            }else
+            } else
                 System.out.println("this drive: " + drive + " is not added");
         }
         motherboard.printDrives();

@@ -21,7 +21,7 @@ public class ma {
         shapes.add(circle2);
         shapes.add(circle3);
         shapes.add(circle4);
-        for (Shape shape: shapes){
+        for (Shape shape : shapes) {
             System.out.printf("Shape #%d: area = %f \n", shapes.indexOf(shape), shape.getArea());  // bruger float fordi det er længere tal
         }
     }
