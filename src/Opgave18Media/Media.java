@@ -1,4 +1,4 @@
-package Opgave18;
+package Opgave18Media;
 
 public  class Media {
     private String name;

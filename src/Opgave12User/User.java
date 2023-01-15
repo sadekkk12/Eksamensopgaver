@@ -1,4 +1,4 @@
-package Opgave12;
+package Opgave12User;
 
 import java.util.Random;
 
@@ -21,7 +21,7 @@ public class User {
     }
 
     public boolean validUserID() {
-        return userID.matches("[a-å]{4}[0-9]{4}");
+        return userID.matches("[a-å]{4}[0-9]{4}");   // \\w etc etc, første del af hvad det skal matche og den anden er hvor mange char det gælder.
     }
 
     public String createUserID() {

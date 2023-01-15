@@ -1,6 +1,4 @@
-package Opgave20;
-
-import java.util.ArrayList;
+package Opgave20Dataobject;
 
 public interface Dataobject {
 

@@ -1,6 +1,4 @@
-package Opgave20;
-
-import java.util.ArrayList;
+package Opgave20Dataobject;
 
 public class Student implements Dataobject {
     private int id;

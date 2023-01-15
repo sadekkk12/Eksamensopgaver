@@ -1,4 +1,4 @@
-package Opgave19;
+package Opgave19Dream;
 
 import java.util.ArrayList;
 import java.util.List;

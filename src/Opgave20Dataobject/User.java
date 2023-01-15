@@ -1,4 +1,4 @@
-package Opgave20;
+package Opgave20Dataobject;
 
 import java.util.ArrayList;
 import java.util.List;

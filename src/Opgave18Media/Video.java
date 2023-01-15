@@ -1,4 +1,4 @@
-package Opgave18;
+package Opgave18Media;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ public class Video extends Media{
         return super.toString() + "\n" + "aspectratio:" + aspectRatio;
     }
     public static void main (String[] args) throws FileNotFoundException {
-        File f = new File("src/Opgave18/mediainfo.txt");  // filens placering
+        File f = new File("src/Opgave18Media/mediainfo.txt");  // filens placering
         PrintStream filewriter = new PrintStream(f);  // skriver ind til filen f
         Scanner scanner = new Scanner(f);   // prøver at læse fra filen nu
 
@@ -32,9 +32,10 @@ public class Video extends Media{
         for (Media m: media){
             System.out.println(m);
 
-            for (Media print: media){
-                filewriter.println(print);
+
             }
+        for (Media print: media){
+            filewriter.println(print);
         }
         while (scanner.hasNextLine()){   // her udskriver vi linjerne i textfilen så længe der er en ny linje
             System.out.println(scanner.nextLine());  // printer nextLine
