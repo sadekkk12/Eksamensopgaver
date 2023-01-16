@@ -1,11 +1,14 @@
 package prøveeksamen4;
 
+import java.util.Arrays;
+
 public class CodeMessage {
     private String plainText;
     private int[] ciphers;
     private String shiftvalue;
 public CodeMessage(String plainText){
     this.plainText = plainText;
+    convertTekst();
 }
 public int getShiftvalue(String shiftvalue){
     int convertedValue = 0;
@@ -43,12 +46,21 @@ public int getShiftvalue(String shiftvalue){
 
 }
 public void convertTekst(){
+    ciphers = new int[plainText.length()];
+    for(int i = 0; i < plainText.length(); i++){
+    ciphers[i] = getShiftvalue(String.valueOf(plainText.toUpperCase().charAt(i)));                                       // cipers[i] fx 0 i den første, dvs første element i arrayet
+    }
 }
+    public int[] getCiphers() {
+        return ciphers;
+    }
 
     public static void main(String[] args) {
-        CodeMessage codeMessage1 = new CodeMessage("ldsadksaldksaldksadkasdlas");
+        CodeMessage codeMessage1 = new CodeMessage("dsafafasffa");
+        System.out.println(Arrays.toString(codeMessage1.getCiphers()));
 
     }
 }
 
-
+//TODO sort, comparator, CharAt, split, exceptions, set, oprette array med indhold i, forstå hvorfor converter skal stå i constructor også +
+// TODO

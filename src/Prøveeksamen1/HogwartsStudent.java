@@ -30,7 +30,7 @@ public class HogwartsStudent {
             if (house.equals("gryffindor") || house.equals("hufflepuff") || house.equals("ravenclaw") || house.equals("slytherin")) {
                 this.house = house;
             } else
-                throw new InputMismatchException("parameter er ugyldigt");
+                throw new InputMismatchException(house + " is not a house");
 
     }
 
@@ -48,4 +48,3 @@ public class HogwartsStudent {
         }
     }
 }
-//TODO få

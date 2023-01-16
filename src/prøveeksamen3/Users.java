@@ -10,7 +10,7 @@ public class Users {
         users.add(user);
     }
 
-    public ArrayList<User> getUsers(Role role) {
+    public ArrayList<User> getUsersByRole(Role role) {
         ArrayList<User> newList = new ArrayList<>();
         for (User user : users) {
             if (user.getRole() == role) {
@@ -27,13 +27,13 @@ public class Users {
         user.addUser(user1);
         user.addUser(user2);
 
-        for (User userloop : user.getUsers(Role.Admin)) {
+        for (User userloop : user.getUsersByRole(Role.Admin)) {
             System.out.printf("Username: %s\nUserid: %s\nprøveeksamen3.Role: %s\n", userloop.getUsername(), userloop.getUserid(), userloop.getRole());
         }
-        for (User userloop : user.getUsers(Role.Reader)) {
+        for (User userloop : user.getUsersByRole(Role.Reader)) {
             System.out.printf("Username: %s\nUserid: %s\nprøveeksamen3.Role: %s\n", userloop.getUsername(), userloop.getUserid(), userloop.getRole());
         }
-        for (User userloop : user.getUsers(Role.Editor)) {
+        for (User userloop : user.getUsersByRole(Role.Editor)) {
             System.out.printf("Username: %s\nUserid: %s\nprøveeksamen3.Role: %s\n", userloop.getUsername(), userloop.getUserid(), userloop.getRole());
 
         }
