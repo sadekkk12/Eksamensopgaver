@@ -25,18 +25,20 @@ public class HogwartsStudent {
         return lastName;
     }
 
-    public void setHouse(String house) throws InputMismatchException {
-        if (house.equals("gryffindor") || house.equals("hufflepuff") || house.equals("ravenclaw") || house.equals("slytherin")) {
-            this.house = house;
-        } else
-            this.house = "ugyldigt";
+    public void setHouse(String house) {
+
+            if (house.equals("gryffindor") || house.equals("hufflepuff") || house.equals("ravenclaw") || house.equals("slytherin")) {
+                this.house = house;
+            } else
+                throw new InputMismatchException("parameter er ugyldigt");
+
     }
 
     public static void main(String[] args) {
         HogwartsStudent student1 = new HogwartsStudent("simon", "har");
         student1.setHouse("gryffindor");
         HogwartsStudent student2 = new HogwartsStudent("simon2", "har2");
-        student2.setHouse("321");
+        student2.setHouse("hufflepuff");
         HogwartsStudent student3 = new HogwartsStudent("simon3", "har3");
         student3.setHouse("ravenclaw");
         ArrayList<HogwartsStudent> students = new ArrayList<>(List.of(student1, student2, student3));

@@ -8,9 +8,8 @@ public class Beer {
     private int price;
     public Beer(String name){
         this.name = name;
-
-
     }
+
     public void setAlchoholPercentage(int alchoholPercentage){
         if (alchoholPercentage > 0 && alchoholPercentage < 100){
             this.alchoholPercentage = alchoholPercentage;
@@ -19,20 +18,15 @@ public class Beer {
             System.out.println("alchoholP not valid");
 
         }
-        {
-
-        }
     }
     public void setPrice(int price){
         if (price > 0){
             this.price = price;
         }
     }
-
     public int getPrice() {
         return price;
     }
-
     public static void main(String[] args){
         Beer beer1 = new Beer("Carlsberg");
         beer1.setPrice(150);
@@ -52,8 +46,6 @@ public class Beer {
             prisgennemsnit += beerloop.getPrice();
         }
         System.out.println(prisgennemsnit/beerArrayList.size());
-
-
         System.out.printf("this beers name is from %s and it has a alcoholpercantage of %d  and its price is %d", beer2.name, beer2.alchoholPercentage, beer2.price);
 
     }
